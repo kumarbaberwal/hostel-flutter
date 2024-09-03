@@ -1,0 +1,9 @@
+{
+    "editor.codeActionsOnSave": {
+        "source": "always",
+        "source.fixAll": "always",
+        "source.organizeImports": "always",
+        "source.sortMembers": "always"
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
+}
