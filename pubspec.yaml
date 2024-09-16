@@ -39,6 +39,9 @@ dependencies:
   flutter_bloc: ^8.1.6
   firebase_core: ^3.4.0
   svg_flutter: ^0.0.1
+  firebase_auth: ^5.2.0
+  dartz: ^0.10.1
+  cloud_firestore: ^5.4.1
 
 dev_dependencies:
   flutter_test:

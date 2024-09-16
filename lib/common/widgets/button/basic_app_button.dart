@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hostel/common/bloc/button/button_bloc.dart';
+import 'package:hostel/common/bloc/button/button_cubit.dart';
 import 'package:hostel/common/bloc/button/button_state.dart';
 
 class BasicAppButton extends StatelessWidget {
@@ -21,7 +21,7 @@ class BasicAppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ButtonBloc, ButtonState>(
+    return BlocBuilder<ButtonCubit, ButtonState>(
       builder: (context, state) {
         if (state is ButtonLoadingState) {
           return loading(context);

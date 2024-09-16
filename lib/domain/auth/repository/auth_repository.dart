@@ -1,5 +1,8 @@
-import 'package:hostel/data/auth/models/user_signin_request.dart';
+import 'package:dartz/dartz.dart';
 
 abstract class AuthRepository {
-  Future<void> signin(UserSigninRequest userSigninRequest);
+  Future<Either> getBlocks();
+  Future<Either> getRooms(String blockId);
+  // Future<Either> signin(UserSigninRequest userSigninRequest);
+  Future<bool> isLoggedIn();
 }

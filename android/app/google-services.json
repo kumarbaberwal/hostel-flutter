@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "22525020677",
+    "project_id": "hostel-70c69",
+    "storage_bucket": "hostel-70c69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22525020677:android:de9ff11d1481652f0f2a6c",
+        "android_client_info": {
+          "package_name": "com.example.hostel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJr_vw9bKS-0z492fFLBta_a8Fl8dxtVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22525020677:android:b9176f52d3a2ec820f2a6c",
+        "android_client_info": {
+          "package_name": "com.example.piethostel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJr_vw9bKS-0z492fFLBta_a8Fl8dxtVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

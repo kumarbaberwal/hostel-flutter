@@ -42,42 +42,6 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyAtN_3wOlxILrXJMFksloCWltunk_T01y0',
-    appId: '1:22525020677:web:6f88955efec427030f2a6c',
-    messagingSenderId: '22525020677',
-    projectId: 'hostel-70c69',
-    authDomain: 'hostel-70c69.firebaseapp.com',
-    storageBucket: 'hostel-70c69.appspot.com',
-    measurementId: 'G-5HF3XPPVYJ',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBJr_vw9bKS-0z492fFLBta_a8Fl8dxtVQ',
-    appId: '1:22525020677:android:b9176f52d3a2ec820f2a6c',
-    messagingSenderId: '22525020677',
-    projectId: 'hostel-70c69',
-    storageBucket: 'hostel-70c69.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCQj3Cvg9fiHJlOJD7K7168wq-KcVa_Iq4',
-    appId: '1:22525020677:ios:8017a6a2edd3bec90f2a6c',
-    messagingSenderId: '22525020677',
-    projectId: 'hostel-70c69',
-    storageBucket: 'hostel-70c69.appspot.com',
-    iosBundleId: 'com.example.piethostel',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCQj3Cvg9fiHJlOJD7K7168wq-KcVa_Iq4',
-    appId: '1:22525020677:ios:8017a6a2edd3bec90f2a6c',
-    messagingSenderId: '22525020677',
-    projectId: 'hostel-70c69',
-    storageBucket: 'hostel-70c69.appspot.com',
-    iosBundleId: 'com.example.piethostel',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAtN_3wOlxILrXJMFksloCWltunk_T01y0',
     appId: '1:22525020677:web:2fb4727ca22888b20f2a6c',
     messagingSenderId: '22525020677',
     projectId: 'hostel-70c69',
@@ -85,4 +49,41 @@ class DefaultFirebaseOptions {
     storageBucket: 'hostel-70c69.appspot.com',
     measurementId: 'G-WHK55P30FZ',
   );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyBJr_vw9bKS-0z492fFLBta_a8Fl8dxtVQ',
+    appId: '1:22525020677:android:de9ff11d1481652f0f2a6c',
+    messagingSenderId: '22525020677',
+    projectId: 'hostel-70c69',
+    storageBucket: 'hostel-70c69.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCQj3Cvg9fiHJlOJD7K7168wq-KcVa_Iq4',
+    appId: '1:22525020677:ios:86e48e21b57592540f2a6c',
+    messagingSenderId: '22525020677',
+    projectId: 'hostel-70c69',
+    storageBucket: 'hostel-70c69.appspot.com',
+    iosBundleId: 'com.example.hostel',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCQj3Cvg9fiHJlOJD7K7168wq-KcVa_Iq4',
+    appId: '1:22525020677:ios:86e48e21b57592540f2a6c',
+    messagingSenderId: '22525020677',
+    projectId: 'hostel-70c69',
+    storageBucket: 'hostel-70c69.appspot.com',
+    iosBundleId: 'com.example.hostel',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyAtN_3wOlxILrXJMFksloCWltunk_T01y0',
+    appId: '1:22525020677:web:9bbb06a3ebd847830f2a6c',
+    messagingSenderId: '22525020677',
+    projectId: 'hostel-70c69',
+    authDomain: 'hostel-70c69.firebaseapp.com',
+    storageBucket: 'hostel-70c69.appspot.com',
+    measurementId: 'G-ELX7N0BKYQ',
+  );
+
 }
