@@ -15,12 +15,12 @@ import 'package:hostel/presentation/auth/widgets/room_numbers.dart';
 
 class SignupPage extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
-  TextEditingController userName = TextEditingController();
-  TextEditingController firstName = TextEditingController();
-  TextEditingController lastName = TextEditingController();
-  TextEditingController phoneNumber = TextEditingController();
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
+  final TextEditingController userName = TextEditingController();
+  final TextEditingController firstName = TextEditingController();
+  final TextEditingController lastName = TextEditingController();
+  final TextEditingController phoneNumber = TextEditingController();
   final gmailRegex = RegExp(r'^[a-zA-Z0-9._%+-]+@gmail\.com$');
   String? block;
   String? roomNumber;
@@ -51,51 +51,54 @@ class SignupPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _signupText(),
-                const SizedBox(
-                  height: 20,
-                ),
-                userNameField(),
-                const SizedBox(
-                  height: 20,
-                ),
-                firstNameField(),
-                const SizedBox(
-                  height: 20,
-                ),
-                lastNameField(),
-                const SizedBox(
-                  height: 20,
-                ),
-                emailField(),
-                const SizedBox(
-                  height: 20,
-                ),
-                passwordField(),
-                const SizedBox(
-                  height: 20,
-                ),
-                phoneNumberField(),
-                const SizedBox(
-                  height: 20,
-                ),
-                _selectBlock(),
-                const SizedBox(
-                  height: 20,
-                ),
-                _selectRoom(),
-                const SizedBox(
-                  height: 20,
-                ),
-                _finishButton(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                signIn(context),
-              ],
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _signupText(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  userNameField(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  firstNameField(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  lastNameField(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  emailField(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  passwordField(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  phoneNumberField(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  _selectBlock(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  _selectRoom(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  _finishButton(context),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  signIn(context),
+                ],
+              ),
             ),
           ),
         ),
@@ -106,8 +109,10 @@ class SignupPage extends StatelessWidget {
   TextFormField emailField() {
     return TextFormField(
       controller: email,
+      keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: 'Enter Email',
+        hintStyle: const TextStyle(color: AppColors.grey),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
@@ -136,6 +141,7 @@ class SignupPage extends StatelessWidget {
       controller: firstName,
       decoration: InputDecoration(
         hintText: 'Enter Firstname',
+        hintStyle: const TextStyle(color: AppColors.grey),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
@@ -162,6 +168,7 @@ class SignupPage extends StatelessWidget {
       controller: lastName,
       decoration: InputDecoration(
         hintText: 'Enter Lastname',
+        hintStyle: const TextStyle(color: AppColors.grey),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
@@ -188,6 +195,7 @@ class SignupPage extends StatelessWidget {
       controller: password,
       decoration: InputDecoration(
         hintText: 'Enter Password',
+        hintStyle: const TextStyle(color: AppColors.grey),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
@@ -214,8 +222,10 @@ class SignupPage extends StatelessWidget {
   TextFormField phoneNumberField() {
     return TextFormField(
       controller: phoneNumber,
+      keyboardType: TextInputType.phone,
       decoration: InputDecoration(
         hintText: 'Enter Phone Number',
+        hintStyle: const TextStyle(color: AppColors.grey),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
@@ -271,6 +281,7 @@ class SignupPage extends StatelessWidget {
       controller: userName,
       decoration: InputDecoration(
         hintText: 'Enter Username',
+        hintStyle: const TextStyle(color: AppColors.grey),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(
