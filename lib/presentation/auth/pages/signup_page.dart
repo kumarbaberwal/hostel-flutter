@@ -340,15 +340,29 @@ class SignupPage extends StatelessWidget {
           },
           child: Container(
             height: 60,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
                 color: AppColors.secondary,
                 borderRadius: BorderRadius.circular(16)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(state),
-                const Icon(Icons.keyboard_arrow_down),
+                const Text(
+                  'Block',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Text(state),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    const Icon(Icons.keyboard_arrow_down),
+                  ],
+                ),
               ],
             ),
           ),

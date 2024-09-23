@@ -44,7 +44,7 @@ class RoomNumbers extends StatelessWidget {
                 );
           },
           child: Text(
-            roomNumbers[index].data()['roomNumber'],
+            roomNumbers[index].data()['roomNumber'].toString(),
             style: const TextStyle(fontSize: 18),
           ),
         );

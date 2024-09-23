@@ -10,8 +10,9 @@ class BlockNames extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: MediaQuery.sizeOf(context).height / 2.7,
+      padding: const EdgeInsets.all(16),
       child: BlocBuilder<BlocksDisplayCubit, BlocksDisplayState>(
         builder: (context, state) {
           if (state is BlocksLoading) {
@@ -40,11 +41,11 @@ class BlockNames extends StatelessWidget {
             Navigator.pop(context);
 
             context.read<BlocksSelectionCubit>().selectBlock(
-                  blockNames[index].data()['blockName'],
+                  blockNames[index].data()['blockId'],
                 );
           },
           child: Text(
-            blockNames[index].data()['blockName'],
+            blockNames[index].data()['blockId'],
             style: const TextStyle(fontSize: 18),
           ),
         );
