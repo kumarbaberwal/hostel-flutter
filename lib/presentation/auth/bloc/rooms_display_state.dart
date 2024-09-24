@@ -1,9 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hostel/domain/rooms_availability/entity/room_entity.dart';
 
 abstract class RoomsDisplayState {}
 
 class RoomsLoaded extends RoomsDisplayState {
-  final List<QueryDocumentSnapshot<Map<String, dynamic>>> rooms;
+  final List<RoomEntity> rooms;
 
   RoomsLoaded({required this.rooms});
 }

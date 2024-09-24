@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hostel/domain/rooms_availability/entity/block_entity.dart';
 import 'package:hostel/presentation/auth/bloc/blocks_display_cubit.dart';
 import 'package:hostel/presentation/auth/bloc/blocks_display_state.dart';
 import 'package:hostel/presentation/auth/bloc/blocks_selection_cubit.dart';
@@ -32,7 +33,7 @@ class BlockNames extends StatelessWidget {
     );
   }
 
-  Widget _blocks(List<QueryDocumentSnapshot<Map<String, dynamic>>> blockNames) {
+  Widget _blocks(List<BlockEntity> blockNames) {
     return ListView.separated(
       padding: const EdgeInsets.all(16),
       itemBuilder: (context, index) {
@@ -41,11 +42,11 @@ class BlockNames extends StatelessWidget {
             Navigator.pop(context);
 
             context.read<BlocksSelectionCubit>().selectBlock(
-                  blockNames[index].data()['blockId'],
+                  blockNames[index].blockId,
                 );
           },
           child: Text(
-            blockNames[index].data()['blockId'],
+            blockNames[index].blockName,
             style: const TextStyle(fontSize: 18),
           ),
         );

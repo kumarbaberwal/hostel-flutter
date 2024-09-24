@@ -9,6 +9,9 @@ import 'package:hostel/domain/auth/usecases/get_room_numbers_use_case.dart';
 import 'package:hostel/domain/auth/usecases/is_logged_in_use_case.dart';
 import 'package:hostel/domain/auth/usecases/signin_use_case.dart';
 import 'package:hostel/domain/rooms_availability/repository/rooms_availability_repository.dart';
+import 'package:hostel/domain/rooms_availability/usecases/get_blocks_use_case.dart';
+import 'package:hostel/domain/rooms_availability/usecases/get_rooms_by_block_use_case.dart';
+import 'package:hostel/domain/rooms_availability/usecases/get_rooms_use_case.dart';
 
 final sl = GetIt.instance;
 
@@ -31,7 +34,7 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<IsLoggedInUseCase>(IsLoggedInUseCase());
   sl.registerSingleton<GetBlockNamesUseCase>(GetBlockNamesUseCase());
   sl.registerSingleton<GetRoomNumbersUseCase>(GetRoomNumbersUseCase());
-  sl.registerSingleton<GetRoomNumbersUseCase>(GetRoomNumbersUseCase());
-  sl.registerSingleton<GetRoomNumbersUseCase>(GetRoomNumbersUseCase());
-  sl.registerSingleton<GetRoomNumbersUseCase>(GetRoomNumbersUseCase());
+  sl.registerSingleton<GetBlocksUseCase>(GetBlocksUseCase());
+  sl.registerSingleton<GetRoomsByBlockUseCase>(GetRoomsByBlockUseCase());
+  sl.registerSingleton<GetRoomsUseCase>(GetRoomsUseCase());
 }

@@ -1,6 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hostel/domain/rooms_availability/entity/room_entity.dart';
 import 'package:hostel/presentation/auth/bloc/rooms_display_cubit.dart';
 import 'package:hostel/presentation/auth/bloc/rooms_display_state.dart';
 import 'package:hostel/presentation/auth/bloc/rooms_selection_cubit.dart';
@@ -31,7 +31,7 @@ class RoomNumbers extends StatelessWidget {
     );
   }
 
-  Widget _rooms(List<QueryDocumentSnapshot<Map<String, dynamic>>> roomNumbers) {
+  Widget _rooms(List<RoomEntity> roomNumbers) {
     return ListView.separated(
       padding: const EdgeInsets.all(16),
       itemBuilder: (context, index) {
@@ -40,11 +40,11 @@ class RoomNumbers extends StatelessWidget {
             Navigator.pop(context);
 
             context.read<RoomsSelectionCubit>().selectRoom(
-                  roomNumbers[index].data()['roomNumber'],
+                  roomNumbers[index].roomNumber.toString(),
                 );
           },
           child: Text(
-            roomNumbers[index].data()['roomNumber'].toString(),
+            roomNumbers[index].roomNumber.toString(),
             style: const TextStyle(fontSize: 18),
           ),
         );
